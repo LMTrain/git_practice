@@ -17,3 +17,16 @@ def password_generator(user_name):
     return password
 
     print(password)
+
+def print_some_characters(word):
+  for i in range(len(word)):
+    if i % 2 == 0:
+      print(word[i])
+
+print_some_characters("watermelon")
+
+def tell_me_about_icecream(favorite_icecream):
+    response = "My favorite icecream is" + favorite_icecream + "."
+    print(response)
+
+tell_me_about_icecream("chocolate")
