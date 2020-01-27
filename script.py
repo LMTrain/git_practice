@@ -1,16 +1,17 @@
-inventory = ['twin bed', 'twin bed', 'headboard', 'queen bed', 'king bed', 'dresser', 'dresser', 'table', 'table', 'nightstand', 'nightstand', 'king bed', 'king bed', 'twin bed', 'twin bed', 'sheets', 'sheets', 'pillow', 'pillow']
-inventory_len = (len(inventory))
-first = inventory[0]
-last = inventory[-1]
-inventory_2_6 = inventory[2:6]
-first_3 = inventory[0:3]
-twin_beds = inventory.count('twin bed')
-inventory.sort()
-
-print(inventory)
-print(inventory_len)
-print(first)
-print(last)
-print(inventory_2_6)
-print(first_3)
-print(twin_beds)
+toppings = ["pepperoni", "pineaple", "cheese", "sausage", "olives", "anchovies", "mushrooms"]
+prices = [2, 6, 1, 3, 2, 7, 2]
+num_pizzas = (len(toppings))
+# print(num_pizzas)
+print("We sell " + str(num_pizzas) + " different kinds of pizza!")
+pizzas = list(zip(prices, toppings))
+#print(pizzas)
+pizzas.sort()
+print(pizzas)
+cheapest_pizza = pizzas[0]
+print(cheapest_pizza)
+priciest_pizza = pizzas[6]
+print(priciest_pizza)
+three_cheapest = pizzas[0:3]
+print(three_cheapest)
+num_two_dollar_slices = prices.count(2)
+print(num_two_dollar_slices)
