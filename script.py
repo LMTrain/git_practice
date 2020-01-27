@@ -1,26 +1,28 @@
-numbers = [1, 1, 2, 3]
-for number in numbers:
-  if number % 2 == 0:
-    break
-  print(number)
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
 
-for i in range(3):
-  print(i)
+prices = [30, 25, 40, 20, 20, 35, 50, 35]
 
-numbers = [2, 4, 6, 8]
-for number in numbers:
-  print("hello!")
+last_week = [2, 3, 5, 8, 4, 4, 6, 2]
 
+# Prices and Cuts:
+total_price = 0
+for price in prices:
+  total_price += price
+  #print(total_price)
+average_price = total_price / len(prices)
+#print("Average Haircut Price: " + str(average_price))
+print("Average Haircut Price: ${0}".format(average_price))
+#number_of_prices = len(prices)
+new_prices = [cut_price - 5 for cut_price in prices]
+print(new_prices)
 
-numbers = [1, 1, 2, 3]
-for number in numbers:
-  if number % 2 == 0:
-    continue
-  print(number)
-
-drink_choices = ["coffee", "tea", "water", "juice", "soda"]
-for drink in drink_choices:
-  print(drink)
-
-for i in range(3):
-  print(5)
+#Revenue:
+total_revenue = 0
+for i in range(len(hairstyles)):
+  total_revenue += prices[i] * last_week[i]
+  #print(total_revenue)
+print("Total Revenue: ${0}".format(total_revenue))
+average_daily_revenue = total_revenue / 7
+print("Average Daily Revenue: ${0}".format(average_daily_revenue))
+cuts_under_30 = [hairstyles[i] for i in range(len(hairstyles)) if new_prices[i] < 30]
+print(cuts_under_30)
