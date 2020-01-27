@@ -1,13 +1,11 @@
-def divide_two_numbers(x, y):
-  result = x / y
-  return result
+def print_something(x):
+  if x <= 2:
+    print("This is printed")
+  if x <= 4:
+    print("This is also printed")
+  if x <= 6:
+    print("Is this printed?")
+  if x <= 8:
+    print("This might be printed.")
 
-try:
-  result = divide_two_numbers(2,0)
-  print(result)
-except NameError:
-  print("A NameError occurred.")
-except ValueError:
-  print("A ValueError occurred.") 
-except ZeroDivisionError:
-  print("A ZeroDivisionError occurred.")
+print_something(5)
