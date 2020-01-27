@@ -1,32 +1,33 @@
-def username_generator(first_name, last_name):
-    if len(first_name) < 3:
-        user_name = first_name
-    else:
-        user_name = first_name[0:3]
-    if len(last_name) < 4:
-        user_name += last_name
-    else:
-        user_name += last_name[0:4]
-    return user_name
+highlighted_poems = "Afterimages:Audre Lorde:1997,  The Shadow:William Carlos Williams:1915, Ecstasy:Gabriela Mistral:1925,   Georgia Dusk:Jean Toomer:1923,   Parting Before Daybreak:An Qi:2014, The Untold Want:Walt Whitman:1871, Mr. Grumpledump's Song:Shel Silverstein:2004, Angel Sound Mexico City:Carmen Boullosa:2013, In Love:Kamala Suraiyya:1965, Dream Variations:Langston Hughes:1994, Dreamwood:Adrienne Rich:1987"
+
+# print(highlighted_poems)
+
+highlighted_poems_list = highlighted_poems.split(',')
+
+# print(highlighted_poems_list)
+
+highlighted_poems_stripped = []
+
+for poem in highlighted_poems_list:
+  highlighted_poems_stripped.append(poem.strip())
   
+# print(highlighted_poems_stripped)
+
+highlighted_poems_details = []
+
+for poem in highlighted_poems_stripped:
+  highlighted_poems_details.append(poem.split(':'))
+  
+titles = []
+poets = []
+dates = []
+
+for poem in highlighted_poems_details:
+  titles.append(poem[0])
+  poets.append(poem[1])
+  dates.append(poem[2])
+  
+for i in range(0,len(highlighted_poems_details)):
+    print('The poem {} was published by {} in {}'.format(titles[i], poets[i], dates[i]))
+
     
-def password_generator(user_name):
-    password = ""
-    for i in range(0, len(user_name)):
-        password += user_name[i-1]
-    return password
-
-    print(password)
-
-def print_some_characters(word):
-  for i in range(len(word)):
-    if i % 2 == 0:
-      print(word[i])
-
-print_some_characters("watermelon")
-
-def tell_me_about_icecream(favorite_icecream):
-    response = "My favorite icecream is" + favorite_icecream + "."
-    print(response)
-
-tell_me_about_icecream("chocolate")
