@@ -21,3 +21,7 @@ print(parsed_date.year)
 # Rendering a date as a string using strftime
 date_string = datetime.strftime(datetime.now(), '%b %d, %Y')
 print(date_string)
+
+parsed_date = datetime.strptime('Jan 15, 2018', '%b %d, %Y')
+print(parsed_date.month)
+print(parsed_date.year)
